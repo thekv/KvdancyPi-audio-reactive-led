@@ -3,7 +3,7 @@ from __future__ import print_function
 from __future__ import division
 import os
 
-DEVICE = 'pi'
+DEVICE = 'esp8266'
 
 """Device used to control LED strip. Must be 'pi',  'esp8266' or 'blinkstick'
 
@@ -18,7 +18,7 @@ to control the leds connected to it.
 """
 
 if DEVICE == 'esp8266':
-    UDP_IP = ['192.168.0.150']
+    UDP_IP = ['192.168.0.10']
     """IP address of the ESP8266. Must match IP in ws2812_controller.ino"""
     """To send to multiple ESPs, create a list with their IPs as such: ['192.168.0.10', '192.168.0.11']"""
     UDP_PORT = 7777
@@ -50,13 +50,13 @@ USE_GUI = False
 DISPLAY_FPS = True
 """Whether to display the FPS when running (can reduce performance)"""
 
-N_PIXELS = 144
+N_PIXELS = 60
 """Number of pixels in the LED strip (must match ESP8266 firmware)"""
 
 GAMMA_TABLE_PATH = os.path.join(os.path.dirname(__file__), 'gamma_table.npy')
 """Location of the gamma correction table"""
 
-MIC_RATE = 48000
+MIC_RATE = 44100
 """Sampling frequency of the microphone in Hz"""
 
 FPS = 50
