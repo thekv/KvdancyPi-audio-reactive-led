@@ -56,7 +56,6 @@ void loop() {
     // If packets have been received, interpret the command
     if (packetSize) {
         int len = port.read(packetBuffer, BUFFER_LEN);
-        for (int j = 0)
         for(int i = 0; i < len; i+=4) {
             packetBuffer[len] = 0;
             N = packetBuffer[i];
