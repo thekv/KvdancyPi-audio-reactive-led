@@ -34,9 +34,18 @@ def install_dependencies():
     os.system("sudo pip3 install numpy scipy==1.4.1 pyaudio pyqtgraph")
     print("================== Completed Installing Numpy, Scipy, PyAudio, PyQtgraph ==================")
 
-    print("================== Start Installing rpi_ws281x/ NeoPixel ==================")
+
+
+
+    
+    print("================== Start Installing rpi_ws281x / NeoPixel ==================")
     os.system("sudo pip3 install adafruit-circuitpython-neopixel")
-    print("================== Completed Installing rpi_ws281x /NeoPixel ==================")
+    os.system("sudo python3 -m pip install --force-reinstall adafruit-blinka")
+    os.system("sudo pip3 install rpi_ws281x==4.3.4")
+    print("================== Completed Installing rpi_ws281x / NeoPixel ==================")
+
+
+
 
 
 def replace_asound():
