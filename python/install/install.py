@@ -12,9 +12,13 @@ def install_dependencies():
     print("================== Start Installing PIP ==================")
     os.system("sudo apt install python3-pip -y")
     print("================== Completed Installing PIP ==================")
+    
+    print("================== Break System Packages ==================")
+    os.system("sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED")
+    print("================== Completed Break System Packages  ==================")
 
     print("================== Start Updating PIP ==================")
-    os.system("sudo pip3 install --upgrade pip")
+    os.system("sudo -H pip3 install --upgrade pip")
     print("================== Completed Updating PIP ==================")
 
     print("================== Start Installing Setuptools and Libatlas ==================")
