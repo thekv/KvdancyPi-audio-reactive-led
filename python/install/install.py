@@ -34,9 +34,9 @@ def install_dependencies():
     os.system("sudo pip3 install numpy scipy==1.4.1 pyaudio pyqtgraph")
     print("================== Completed Installing Numpy, Scipy, PyAudio, PyQtgraph ==================")
 
-    print("================== Start Installing rpi_ws281x ==================")
-    os.system("sudo pip3 install rpi_ws281x")
-    print("================== Completed Installing rpi_ws281x ==================")
+    print("================== Start Installing rpi_ws281x/ NeoPixel ==================")
+    os.system("sudo pip3 install adafruit-circuitpython-neopixel")
+    print("================== Completed Installing rpi_ws281x /NeoPixel ==================")
 
 
 def replace_asound():
